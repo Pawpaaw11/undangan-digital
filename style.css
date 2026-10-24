@@ -1,0 +1,272 @@
+body {
+    background-color: #f7dce7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #2b1d22;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.invitation-wrapper {
+    max-width: 440px;
+    min-height: 100vh;
+    background-color: #fba1c8;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.bg-decorative-circle {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background-color: #ffaed1;
+    top: 100px;
+    left: -120px;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.popper-left {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+    animation: popperFloatLeft 4s ease-in-out infinite alternate;
+    transform-origin: top left;
+}
+
+.popper-right {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+    animation: popperFloatRight 4.2s ease-in-out infinite alternate;
+    transform-origin: top right;
+}
+
+@keyframes popperFloatLeft {
+    0% {
+        transform: rotate(0deg) translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: rotate(3deg) translateY(4px) scale(1.03);
+    }
+
+    100% {
+        transform: rotate(-3deg) translateY(-2px) scale(1.01);
+    }
+}
+
+@keyframes popperFloatRight {
+    0% {
+        transform: rotate(0deg) translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: rotate(-3deg) translateY(4px) scale(1.03);
+    }
+
+    100% {
+        transform: rotate(3deg) translateY(-2px) scale(1.01);
+    }
+}
+
+.confetti-wrapper {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.confetti-flake {
+    position: absolute;
+    top: -25px;
+    opacity: 0;
+    will-change: transform, opacity;
+    animation-name: confettiFall;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    85% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(480deg) translateX(30px);
+        opacity: 0;
+    }
+}
+
+.font-script {
+    font-family: 'Alex Brush', cursive;
+}
+
+.font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-display {
+    font-family: 'Bodoni Moda', serif;
+}
+
+.text-pink-title {
+    color: #d93d79;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+}
+
+.couple-title {
+    font-size: 3.6rem;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.date-sub {
+    color: #d93d79;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.wedding-invite-text {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    line-height: 1.1;
+}
+
+.invitation-body-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #2e2e2e;
+}
+
+.guest-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-style: italic;
+    color: #1a1a1a;
+}
+
+.btn-detail {
+    background-color: #7e4344;
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.btn-detail:hover,
+.btn-detail:focus,
+.btn-detail:active {
+    background-color: #6a3738 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(126, 67, 68, 0.35);
+}
+
+.offcanvas-bottom {
+    height: auto !important;
+    max-height: 85vh;
+    border-top-left-radius: 28px !important;
+    border-top-right-radius: 28px !important;
+    border: none !important;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.drag-handle {
+    width: 48px;
+    height: 4px;
+    background-color: #e5b0c6;
+    border-radius: 4px;
+    margin: 0 auto 12px auto;
+}
+
+.btn-close-custom {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #fce4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: #7e4344;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-close-custom:hover {
+    background-color: #f8bbd0;
+}
+
+.schedule-box {
+    background-color: #fff5f8;
+    border: 1px solid #f7d2e0;
+    border-radius: 18px;
+}
+
+.venue-box {
+    background-color: #2b1d22;
+    border-radius: 18px;
+    color: #ffffff;
+}
+
+.btn-music {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #7e4344;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1040;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-music:hover {
+    transform: scale(1.08);
+    background-color: #6a3738;
+}
+
+.btn-music.is-playing svg {
+    animation: musicSpin 3.5s linear infinite;
+}
+
+@keyframes musicSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
